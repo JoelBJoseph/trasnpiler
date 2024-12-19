@@ -32,11 +32,8 @@ export default function TranspilerPage() {
       } else {
         setError(data.error || "Failed to transpile the code.");
       }
-    } catch (err) {
-      console.error("Frontend Error:", err);
+    } catch {
       setError("An unexpected error occurred. Please try again.");
-    } finally {
-      setLoading(false);
     }
   };
 

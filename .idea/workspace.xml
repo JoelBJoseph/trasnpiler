@@ -37,6 +37,7 @@
       <change beforePath="$PROJECT_DIR$/../bambrush/src/components/Navbar.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/components/Navbar.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/tailwind.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734599299796</updated>
-      <workItem from="1734599301012" duration="1489000" />
+      <workItem from="1734599301012" duration="1781000" />
     </task>
     <task id="LOCAL-00001" summary="to check if it is working in site">
       <option name="closed" value="true" />
@@ -117,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734600696092</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="eslint">
+      <option name="closed" value="true" />
+      <created>1734600866150</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734600866150</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="to check if it is working in site" />
     <MESSAGE value="changed the front-end" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the front-end" />
+    <MESSAGE value="eslint" />
+    <option name="LAST_COMMIT_MESSAGE" value="eslint" />
   </component>
 </project>
