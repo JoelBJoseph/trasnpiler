@@ -8,26 +8,6 @@
       <change afterPath="$PROJECT_DIR$/../c or c++ pgms/network lab/.idea/network lab.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../c or c++ pgms/network lab/bi-directional/.idea/bi-directional.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../main-project/.idea/main-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/transpiler.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/file.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/globe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/window.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/api/transpile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/.eslintrc.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/.idea/.gitignore" beforeDir="false" />
@@ -52,13 +32,11 @@
       <change beforePath="$PROJECT_DIR$/../bambrush/src/app/aboutus/page.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/app/contact/page.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bambrush/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/app/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/app/shop/page.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/components/Navbar.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/src/components/Navbar.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/tailwind.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bambrush/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +51,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -111,11 +90,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734599299796</updated>
-      <workItem from="1734599301012" duration="637000" />
+      <workItem from="1734599301012" duration="954000" />
     </task>
+    <task id="LOCAL-00001" summary="to check if it is working in site">
+      <option name="closed" value="true" />
+      <created>1734600099892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734600099892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="to check if it is working in site" />
+    <option name="LAST_COMMIT_MESSAGE" value="to check if it is working in site" />
   </component>
 </project>
