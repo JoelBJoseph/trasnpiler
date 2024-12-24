@@ -21,22 +21,20 @@ export default async function handler(
         }
 
         const url =
-            "https://api.edenai.run/v2/workflow/71a489a8-d724-4728-a1be-234e2612f3e9/execution/";
-        const payload = {
-            Text: code,
-            Output_language: "Rust",
-        };
+            "https://api.edenai.run/v2/workflow/ceef28b2-fdbe-4a56-8ab5-8f6c4a347808/execution/";
+        const payload = {"c_code": "#include <stdio.h>\nint main() {\n    int a, b, c;\n    c = a + b;\n    printf('Sum: %d', c);\n    return 0;\n}"};
 
         try {
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjk5NDdmZDktYjg0YS00NjY3LTliNzUtNzk5MGJhODdlZTAzIiwidHlwZSI6ImFwaV90b2tlbiJ9.lnJqRcZN_5igbjaLQRW5PdooQSp4HyPl4AoHWBcsv4A"
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmFkYjIyMGItNmUzNy00ODZiLWJiMzQtN2JlNjY1Yzc5YmFlIiwidHlwZSI6ImFwaV90b2tlbiJ9.sfIvYUnrqdgXWs2l7ZtfSUW1W7Wj-cfDp8sMc3gH0MI"
                 },
                 body: JSON.stringify(payload),
             });
 
+            console.log(response)
             if (!response.ok) {
                 const errorText = await response.text();
                 return res.status(response.status).json({ error: errorText });

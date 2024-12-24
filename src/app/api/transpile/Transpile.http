@@ -1,0 +1,26 @@
+
+
+###
+POST https://api.edenai.run/v2/workflow/ceef28b2-fdbe-4a56-8ab5-8f6c4a347808/execution/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmFkYjIyMGItNmUzNy00ODZiLWJiMzQtN2JlNjY1Yzc5YmFlIiwidHlwZSI6ImFwaV90b2tlbiJ9.sfIvYUnrqdgXWs2l7ZtfSUW1W7Wj-cfDp8sMc3gH0MI
+
+{
+ "c_code":"#include <stdio.h>\\nint main() {\\n    int a, b, c;\\n    c = a + b;\\n    printf('Sum: %d', c);\\n    return 0;\\n}"
+}
+
+###
+GET https://api.edenai.run/v2/workflow/ceef28b2-fdbe-4a56-8ab5-8f6c4a347808/execution/970c5b45-3fd6-4cb3-8a61-d9457b585bad
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmFkYjIyMGItNmUzNy00ODZiLWJiMzQtN2JlNjY1Yzc5YmFlIiwidHlwZSI6ImFwaV90b2tlbiJ9.sfIvYUnrqdgXWs2l7ZtfSUW1W7Wj-cfDp8sMc3gH0MI
+
+#
+####
+#POST https://api.edenai.run/v2/workflow/71a489a8-d724-4728-a1be-234e2612f3e9/execution/
+#Content-Type: application/json
+#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmFkYjIyMGItNmUzNy00ODZiLWJiMzQtN2JlNjY1Yzc5YmFlIiwidHlwZSI6ImFwaV90b2tlbiJ9.sfIvYUnrqdgXWs2l7ZtfSUW1W7Wj-cfDp8sMc3gH0MI
+#
+#{
+#  "Text" : "#include <stdio.h>\\nint main() {\\n    int a, b, c;\\n    c = a + b;\\n    printf('Sum: %d', c);\\n    return 0;\\n}",
+#  "Output_language": "R"
+#}

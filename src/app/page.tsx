@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 
 export default function TranspilerPage() {
@@ -64,7 +65,7 @@ export default function TranspilerPage() {
                       : "bg-blue-500 text-white hover:bg-blue-600"
               }`}
           >
-            {loading ? "Transpiling..." : "Transpile to Rust"}
+            {loading ? "Transpiling..." : "Transpile to Rust sd"}
           </button>
         </div>
 
