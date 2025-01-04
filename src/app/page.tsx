@@ -1,90 +1,75 @@
-import { useState } from "react";
+'use client';
 
-export default function TranspilerPage() {
-  const [cCode, setCCode] = useState(""); // User-provided C code
-  const [rustCode, setRustCode] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+import { useState } from 'react';
 
-  const handleTranspile = async () => {
-    if (!cCode.trim()) {
-      setError("Please provide valid C code.");
-      return;
-    }
+export default function Home() {
+    const [cCode, setCCode] = useState('');
+    const [rustCode, setRustCode] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    setLoading(true);
-    setError(null);
-    setRustCode(null);
+    const handleConvert = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch('/api/convert', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ cCode }),
+            });
 
-    try {
-      const response = await fetch("/api/transpile", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code: cCode }),
-      });
+            if (!response.ok) {
+                throw new Error('Failed to convert code');
+            }
 
-      const data = await response.json();
+            const data = await response.json();
+            setRustCode(data.rustCode);
+        } catch (error: any) {
+            console.error('Error converting code:', error.message);
+            alert('Conversion failed.');
+        } finally {
+            setLoading(false);
+        }
+    };
 
-      if (response.ok) {
-        setRustCode(data.result);
-      } else {
-        setError(data.error || "Failed to transpile the code.");
-      }
-    } catch {
-      setError("An unexpected error occurred. Please try again.");
-    }
-  };
+    return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl w-full bg-white p-8 rounded-lg shadow-lg">
+                <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">C to Safe Rust Transpiler</h1>
 
-  return (
-      <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-6">
-        <h1 className="text-3xl font-bold mb-6">C to Rust Transpiler</h1>
+                <div className="mb-6">
+                    <label htmlFor="cCode" className="block text-lg font-medium text-gray-700 mb-2">
+                        Enter C Code:
+                    </label>
+                    <textarea
+                        id="cCode"
+                        value={cCode}
+                        onChange={(e) => setCCode(e.target.value)}
+                        placeholder="Enter your C code here..."
+                        rows={10}
+                        className="w-full p-4 border border-gray-300 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                </div>
 
-        <div className="w-full max-w-3xl">
-          {/* Input Area */}
-          <label htmlFor="cCode" className="block text-lg font-semibold mb-2">
-            Enter C Code:
-          </label>
-          <textarea
-              id="cCode"
-              value={cCode}
-              onChange={(e) => setCCode(e.target.value)}
-              className="w-full h-40 p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="#include <stdio.h>\nint main() {\n    int a, b, c;\n    c = a + b;\n    printf('Sum: %d', c);\n    return 0;\n}"
-          ></textarea>
+                <button
+                    onClick={handleConvert}
+                    disabled={loading}
+                    className={`w-full py-3 mt-4 text-lg font-medium text-white rounded-lg focus:outline-none ${
+                        loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'
+                    }`}
+                >
+                    {loading ? 'Converting...' : 'Converted to Safe Rust'}
+                </button>
 
-          {/* Transpile Button */}
-          <button
-              onClick={handleTranspile}
-              disabled={loading}
-              className={`mt-4 px-6 py-3 font-semibold rounded-lg ${
-                  loading
-                      ? "bg-gray-400 text-gray-700 cursor-not-allowed"
-                      : "bg-blue-500 text-white hover:bg-blue-600"
-              }`}
-          >
-            {loading ? "Transpiling..." : "Transpile to Rust"}
-          </button>
-        </div>
-
-        {/* Output Section */}
-        <div className="w-full max-w-3xl mt-8">
-          {error && (
-              <div className="p-4 bg-red-100 text-red-700 rounded-lg">
-                Error: {error}
-              </div>
-          )}
-
-          {rustCode && (
-              <div>
-                <h2 className="text-lg font-semibold mb-2">Transpiled Rust Code:</h2>
-                <pre className="w-full p-4 bg-gray-900 text-white rounded-lg overflow-x-auto">
+                {rustCode && (
+                    <div className="mt-6">
+                        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Generated Safe Rust Code:</h2>
+                        <pre className="bg-gray-100 p-4 rounded-lg border border-gray-300 text-sm text-gray-800 whitespace-pre-wrap break-words">
               {rustCode}
             </pre>
-              </div>
-          )}
+                    </div>
+                )}
+            </div>
         </div>
-      </div>
-  );
+    );
 }
