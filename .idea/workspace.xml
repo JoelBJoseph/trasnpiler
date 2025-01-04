@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/../bambrush/src/app/layout.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bambrush/tsconfig.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +71,8 @@
       <workItem from="1734599301012" duration="3189000" />
       <workItem from="1735316252382" duration="2829000" />
       <workItem from="1735910721506" duration="9574000" />
-      <workItem from="1735979867144" duration="2816000" />
+      <workItem from="1735979867144" duration="3595000" />
+      <workItem from="1735993875170" duration="4251000" />
     </task>
     <task id="LOCAL-00001" summary="to check if it is working in site">
       <option name="closed" value="true" />
@@ -123,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735980338836</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="not working api">
+      <option name="closed" value="true" />
+      <created>1735988999752</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735988999752</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,8 +140,9 @@
     <MESSAGE value="to check if it is working in site" />
     <MESSAGE value="changed the front-end" />
     <MESSAGE value="eslint" />
-    <MESSAGE value="changed the error try catch" />
     <MESSAGE value="used gpt api" />
-    <option name="LAST_COMMIT_MESSAGE" value="used gpt api" />
+    <MESSAGE value="changed the error try catch" />
+    <MESSAGE value="not working api" />
+    <option name="LAST_COMMIT_MESSAGE" value="not working api" />
   </component>
 </project>
