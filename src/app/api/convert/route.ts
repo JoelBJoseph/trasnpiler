@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
-console.log('api key: ' + process.env.OPENAI_API_KEY);
+console.log("api key: " + process.env.OPENAI_API_KEY);
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 export const POST = async (req: NextRequest, res: NextResponse) => {
@@ -12,11 +12,12 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-3.5-turbo",
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant.",
+          content:
+            "You are a code converter chat assistant. Your goal is to convert the C code given by role user to a Rust code. Do not give title to your response or explanation of the code. Just return the rust code.",
         },
         {
           role: "user",
@@ -25,14 +26,11 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
       ],
     });
 
-    console.log("Response from OpenAi" + completion);
+    const rustCode = completion?.choices[0].message.content;
 
-    const rustCode = completion?.data?.choices[0].message.content.trim();
-    console.log("Converted Rust Code:\n", rustCode);
+    return Response.json({ rustCode: rustCode });
   } catch (error) {
     console.error("Error while converting code:", error);
   }
-
-  return Response.json(requestBody);
+  return Response.json({});
 };
-
