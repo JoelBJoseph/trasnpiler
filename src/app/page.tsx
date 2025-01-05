@@ -10,7 +10,7 @@ export default function Home() {
     const handleConvert = async () => {
         setLoading(true);
         try {
-            const response = await fetch('/api/route', {
+            const response = await fetch('/api/convert', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
